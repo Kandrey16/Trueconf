@@ -1,0 +1,26 @@
+{
+  "name": "trueconf_area",
+  "version": "1.0.0",
+  "description": "TypeScript library for geometric shapes with EventTarget and async support",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "geometry",
+    "shapes",
+    "typescript",
+    "events"
+  ],
+  "author": "Andrey Kurdelov",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "uuid": "^11.1.1"
+  }
+}
