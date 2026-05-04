@@ -1,4 +1,4 @@
-import Shape = require('../base/Shape')
+import { Shape } from '../base/Shape'
 
 /**
  * Параметры, необходимые для создания круга.
@@ -10,7 +10,7 @@ export interface ICircleParams {
 /**
  * Реализация фигуры "Круг".
  */
-export class Circle extends Shape.Shape {
+export class Circle extends Shape {
   readonly type = 'circle'
 
   /**

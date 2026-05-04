@@ -2,13 +2,13 @@
 
 ## Установка
 ```
-npm install lib-name
+npm install trueconf-shapes
 ```
 
 ## Использование
 
 ```ts
-import { Rectangle } from 'trueconf_area';
+import { Rectangle } from 'trueconf-shapes';
 
 const rect = new Rectangle({ width: 10, height: 5 });
 
@@ -23,7 +23,7 @@ rect.addEventListener('areaCalculated', (e) => {
 ### Круг
 
 ```ts
-import { Circle } from 'trueconf_area';
+import { Circle } from 'trueconf-shapes';
 
 const circle = new Circle({ radius: 7 });
 
@@ -39,7 +39,7 @@ circle.addEventListener('areaCalculated', (e) => {
 ### Треугольник
 
 ```ts
-import { Triangle } from 'trueconf_area';
+import { Triangle } from 'trueconf-shapes';
 
 const triangle = new Triangle({ a: 3, b: 4, c: 5 });
 
@@ -54,7 +54,7 @@ triangle.addEventListener('areaCalculated', (e) => {
 ### Через фабрику
 
 ```ts
-import { createShape } from 'your-lib/src/factory/createShape';
+import { createShape } from 'trueconf-shapes';
 
 const shape = createShape('circle', { radius: 10 });
 

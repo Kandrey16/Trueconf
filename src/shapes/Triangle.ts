@@ -1,4 +1,4 @@
-import Shape = require('../base/Shape')
+import { Shape } from '../base/Shape'
 
 /**
  * Параметры, необходимые для создания треугольника.
@@ -12,7 +12,7 @@ export interface ITriangleParams {
 /**
  * Реализация фигуры "Треугольник".
  */
-export class Triangle extends Shape.Shape {
+export class Triangle extends Shape {
   readonly type = 'triangle'
 
   /**

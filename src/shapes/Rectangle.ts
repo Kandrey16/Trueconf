@@ -1,4 +1,4 @@
-import Shape = require('../base/Shape')
+import { Shape } from '../base/Shape'
 
 /**
  * Параметры, необходимые для создания прямоугольника.
@@ -11,7 +11,7 @@ export interface IRectangleParams {
 /**
  * Реализация фигуры "Прямоугольник".
  */
-export class Rectangle extends Shape.Shape {
+export class Rectangle extends Shape {
   readonly type = 'rectangle'
 
   /**

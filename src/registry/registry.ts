@@ -1,8 +1,8 @@
-import Shape = require('../base/Shape')
+import { Shape } from '../base/Shape'
 
-type TShapeConstructor = new (params: any) => Shape.Shape;
+type TShapeConstructor = new (params: any) => Shape
 
-const registry = new Map<string, TShapeConstructor>();
+const registry = new Map<string, TShapeConstructor>()
 
 /**
  * Регистрирует конструктор фигуры по указанному типу.
@@ -11,7 +11,7 @@ const registry = new Map<string, TShapeConstructor>();
  * @param ctor Конструктор, который создаёт фигуру.
  */
 export function registerShape(type: string, ctor: TShapeConstructor) {
-  registry.set(type, ctor);
+  registry.set(type, ctor)
 }
 
 /**
@@ -22,12 +22,12 @@ export function registerShape(type: string, ctor: TShapeConstructor) {
  * @returns Созданный экземпляр фигуры.
  * @throws Error Если фигура с таким типом не зарегистрирована.
  */
-export function createShape(type: string, params: any): Shape.Shape {
-  const Ctor = registry.get(type);
+export function createShape(type: string, params: any): Shape {
+  const Ctor = registry.get(type)
 
   if (!Ctor) {
-    throw new Error(`Shape "${type}" not registered`);
+    throw new Error(`Shape "${type}" not registered`)
   }
 
-  return new Ctor(params);
+  return new Ctor(params)
 }

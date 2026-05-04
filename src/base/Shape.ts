@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from 'uuid'
-import type types = require('../types')
+import type { IShape } from '../types'
 
 /**
  * Базовый класс для всех геометрических фигур в библиотеке.
  */
-export abstract class Shape extends EventTarget implements types.IShape {
+export abstract class Shape extends EventTarget implements IShape {
   readonly id: string
   abstract readonly type: string
 

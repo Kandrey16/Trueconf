@@ -1,6 +1,6 @@
-import Circle = require('../shapes/Circle')
-import Rectangle = require('../shapes/Rectangle')
-import Triangle = require('../shapes/Triangle')
+import { Circle } from '../shapes/Circle'
+import { Rectangle } from '../shapes/Rectangle'
+import { Triangle } from '../shapes/Triangle'
 import { TShapeType } from '../types'
 
 /**
@@ -15,11 +15,11 @@ import { TShapeType } from '../types'
 export function createShape(type: TShapeType, params: any) {
   switch (type) {
     case 'rectangle':
-      return new Rectangle.Rectangle(params)
+      return new Rectangle(params)
     case 'circle':
-      return new Circle.Circle(params)
+      return new Circle(params)
     case 'triangle':
-      return new Triangle.Triangle(params)
+      return new Triangle(params)
     default:
       throw new Error(`Unknown shape: ${type}`)
   }
